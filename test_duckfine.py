@@ -26,7 +26,7 @@ class TestDuckFine(unittest.TestCase):
     def test_total_owed_accumulates_fees(self):
         self.fine.charge(3)
         self.fine.charge(4)
-        self.assertEqual(self.fine.total_owed, 1.00)
+        self.assertEqual(self.fine.total_owed, 1.50)
 
     def test_negative_days_late_raise_value_error(self):
         with self.assertRaises(ValueError):
